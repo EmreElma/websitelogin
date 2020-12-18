@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="tr">
+	<head>
+		<meta http-equiv = "Content-Type" content = "text/html;charset = UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css"/>
+		<title>Giriş Yap</title>
+	</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+					  </button>
+				</div>
+			</div>
+			<div >
+			  <ul class="nav navbar-nav">
+					<li role="presentation"><a href="anasayfa.html">Anasayfa</a></li>
+					<li role="presentation" class="active"><a href="index.html">Giriş Yap</a></li>
+					<li role="presentation"><a href="uyeol.html">Üye Ol</a></li>
+					<li role="presentation"><a href="yenisifre.html">Şifremi Unuttum</a></li>
+			   </ul>
+			 </div> 
+		 </nav>
+		 <div class="row">
+			<form action = "giriskontrol.php" role="form" method = "POST">
+				<div class="col-lg-6">
+					<div class="well well-sm"><strong><span class="glyphicon glyphicon-asterisk"></span> Zorunlu Alan </strong></div>
+					<div class="form-group">
+						<label for="kullanici">Kullanıcı Adı</label>
+						<div class="input-group">
+							<input type="text" class="form-control" name="kullanici" id="kullanici" placeholder="Kullanıcı Adı" required >
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sifre">Şifre</label>
+						<div class="input-group">
+							 <input name = "sifre" type="password" class="form-control" id="sifre" placeholder="Şifre" required >
+							<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+						</div>
+					</div>
+					<input type="submit" name="submit" id="submit" value="Giriş" class="btn btn-info pull-right">
+			     </div>
+		    </form>
+		 </div>
+		
+	 <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">Mesaj Gönder</button>
+
+   <!-- Modal -->
+	<form action = "mesajal.php" method = "POST">
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+		<div class="modal-content">
+			  <div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title" id="myModalLabel">Mesajınızı Yazın</h4>
+			  </div>
+		  <div class="modal-body">
+			   <div class="form-group">
+					<div class="input-group">
+					    <textarea name="mesaj" id="mesaj" class="form-control" rows="5" required></textarea>
+						<span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+					</div>
+				</div>
+		  </div>
+		  <div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+				<button type="submit" name="submit" id="submit" class="btn btn-primary">Gönder</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+   </form>
+</div>
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	
+</body>
+</html>
